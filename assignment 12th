@@ -1,0 +1,61 @@
+function startTimer(duration, callback) {
+    setTimeout(function() {
+      callback();
+    }, duration);
+  }
+
+  
+  function stepOne() {
+    console.log("9");
+    startTimer(1000, stepTwo);
+  }
+  
+  function stepTwo() {
+    console.log("8");
+    startTimer(1000, stepThree);
+  }
+  
+  function stepThree() {
+    console.log("7");
+    startTimer(1000, stepFour);
+    
+  }
+
+function stepFour(){
+    console.log("6");
+    startTimer(1000,stepFive);
+
+}
+
+function stepFive(){
+    console.log("5");
+    startTimer(1000,stepSix);
+}
+
+function stepSix(){
+    console.log("4");
+    startTimer(1000,stepSeven);
+}
+
+function stepSeven(){
+    console.log("3");
+    startTimer(1000,stepEight);
+}
+
+function stepEight(){
+    console.log("2");
+    startTimer(1000,stepNine);
+}
+
+function stepNine(){
+    console.log("1");
+    startTimer(1000,function(){
+        console.log("Happy independace day!")
+    });
+}
+
+    
+  
+  
+  // Start the timer
+  startTimer(1000, stepOne);
